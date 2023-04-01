@@ -4,7 +4,7 @@ from snake import Snake
 from apple import Apple
 pygame.init()
 screen = pygame.display.set_mode((1000, 1000), 0 , 32)
-pygame.display.set_caption('Snake, by BerretMan')
+pygame.display.set_caption('Snake, by BerretMan, score=0')
 
 BLACK = (0,0,0)
 player = Snake(screen)
