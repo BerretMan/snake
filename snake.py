@@ -4,7 +4,7 @@ class Snake:
     def __init__(self,screen):
         self.x=0
         self.y=0
-        self.case=[[0,0],[1,0]]
+        self.case=[[10,9],[10,10]]
         self.screen = screen
         self.color=GREEN=(0,255,0)
         self.v_x =1
@@ -24,7 +24,9 @@ class Snake:
     
     def check_if_dead(self):
         #presence de double 
-        if self.case[-1] in self.case[:-1] or 0>self.case[-1][0] or self.case[-1][0]>25 or self.case[-1][1]<0 or self.case[-1][1]>25:
+        if self.case[-1] in self.case[:-1] or 0>self.case[-1][0] or self.case[-1][0]>24 or self.case[-1][1]<0 or self.case[-1][1]>24:
             return True
         return False
+    def coord(self):
+        return self.case
             
